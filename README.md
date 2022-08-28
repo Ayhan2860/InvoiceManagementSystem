@@ -32,3 +32,53 @@ Entities Layer created for database tables.
 ### MvcWebUI
 Model View Controller Layer that opens the business layer to the internet.
 </details>
+
+## Models
+<details>
+<summary> Toggle Content </summary>
+
+### Apartment
+
+| Name                        | DataType | Allow Nulls | Default |
+|:----------------------------|:---------|:------------|:--------|
+| Id                          | int      | NotNull     |         |
+| NumberOfFloors              | int      | NotNull     |         |
+| NumberOfHousesOnTheFloors   | int      | NotNull     |         |
+| BlockName                   | string   | NotNull     |         |
+
+### House
+
+| Name          | DataType | Allow Nulls | Default |
+|:--------------|:---------|:------------|:--------|
+| Id            | int      | NotNull     |         |
+| ApartmentId   | int      | NotNull     |         |
+| TypeInfo      | string   | NotNull     |         |
+| FloorNumber   | int      | NotNull     |         |
+| DoorNumber    | int      | NotNull     |         |
+| IsOwner       | bool     | NotNull     |         |
+| State         | bool     | NotNull     |         |
+
+
+### Invoice
+
+| Name                 | DataType   | Allow Nulls | Default |
+|:---------------------|:-----------|:------------|:--------|
+| Id                   | int        | NotNull     |         |
+| HouseId              | int        | NotNull     |         |
+| InvoiceGenreId       | int        | NotNull     |         |
+| InvocingDateTime     | DateTime   | NotNull     |         |
+| LastPaymentDate      | DateTime   | NotNull     |         |
+| PaymentDate          | DateTime   | NotNull     |         |
+| Amount               | Decimal    | NotNull     |         |
+
+
+### Invoice
+
+| Name                 | DataType   | Allow Nulls | Default |
+|:---------------------|:-----------|:------------|:--------|
+| Id                   | int        | NotNull     |         |
+| Name                 | string     | NotNull     |         |
+
+
+</details>
+
