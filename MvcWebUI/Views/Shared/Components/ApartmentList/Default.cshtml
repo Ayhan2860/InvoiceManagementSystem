@@ -1,0 +1,35 @@
+  @model MvcWebUI.Models.ApartmentViewModel
+  @{
+     var acss = "nav-link";
+  }
+  <div class="col-sm-12 col-xl">
+                        <div class="bg-secondary rounded  p-1">
+                           
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                @if(Model.CurrentApartment == 0)
+                                    acss += " active";
+                                    <li class="nav-item" role="presentation">
+                                    <a href="~/Admin/Houses" class="@acss mt-3" id="pills-home-tab" 
+                                         type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">All Houses</a>
+                                </li>
+                                
+                                @foreach (var apartment in Model.Apartments)
+                                {
+                                    var css = "nav-link";
+                                    if(apartment.Id == Model.CurrentApartment)
+                                    {
+                                         css += " active";
+                                    }
+                                     
+                                    <li class="nav-item" role="presentation">
+                                    <a href="~/Admin/Houses?apartment=@apartment.Id" class="@css mt-3" id="pills-home-tab" 
+                                         type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">@apartment.BlockName</a>
+                                </li>
+                                }
+                              
+                            </ul>
+ 
+                        </div>
+                    </div>

@@ -1,4 +1,27 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿let selectedDate = () =>
+{
+     let newDate = new Date;
+     let date  = newDate.getDate();
+     let month = newDate.getMonth() + 1;
+     let year = newDate.getFullYear();
 
-// Write your JavaScript code.
+    if(date < 10)
+      date = '0' + date
+    if(month < 10)
+      month = '0' + month;
+    
+    return   `${month}/${date}/${year}`;
+
+} 
+let formatedDate = selectedDate();
+
+$('.result').val(formatedDate)
+$(".datepicker").click(function (e) {
+     if($(e.target).data('day') != null)
+     {
+           
+          $('.result').val($(e.target).data('day'))
+     }
+})
+
+

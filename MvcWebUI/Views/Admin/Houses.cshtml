@@ -1,0 +1,57 @@
+@model MvcWebUI.Models.HouseViewModel
+@{
+    @* ViewData["Title"] = "Admin Page"; *@
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+ @await Component.InvokeAsync("ApartmentList")
+  <div class="container-fluid pt-4 px-4">
+               
+          
+ <div class="row g-4">
+                   
+                    <div class="col-sm-12 col-xl">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h4 class="mb-4">All Houses</h4>
+                            <table class="table table-hover text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Floor Number</th>
+                                        <th scope="col">Door Number</th>
+                                        <th scope="col">State</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>  <a asp-controller="Admin" asp-action="AddHouse"   class="btn btn-square btn-outline-success m-2"><i class="fas fa-plus-circle"></i></a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                
+                                    @foreach (var house in Model.Houses)
+                                    {
+                                        <tr>
+                                        <th scope="row">@house.TypeInfo</th>
+                                        <td>@house.FloorNumber</td>
+                                        <td>@house.DoorNumber</td>
+                                        <td>@(house.State ? "Full" : "Empty")</td>
+                                        <td>
+                                            <a asp-controller="Admin" asp-action="HouseDetail" asp-route-houseId="@house.Id"  type="button" class="btn btn-square btn-outline-info m-2"><i class="fa fa-info" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                        <a asp-controller="Admin" asp-action="UpdateHouse" asp-route-houseId="@house.Id"   class="btn btn-square btn-outline-warning m-2"><i class="fa fa-edit"></i></a>
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Admin" asp-action="DeleteHouse" asp-route-houseId="@house.Id"  type="button" class="btn btn-square btn-outline-primary m-2"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    }
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+  </div>
+          
+           

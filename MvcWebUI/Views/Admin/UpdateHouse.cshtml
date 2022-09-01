@@ -1,0 +1,40 @@
+@model MvcWebUI.Models.UpdateModels.HouseUpdateViewModel
+@{
+    ViewData["Title"] = "Update House";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+ <div class="container-fluid d-flex justify-content-center align-items-center pt-4 px-4">
+<div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Update House Add Form</h6>
+                            <form method="post" asp-controller="Admin" asp-action="UpdateHouse">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">House Type</label>
+                                    <input asp-for="House.TypeInfo" type="text" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" >
+                                     <span class="ms-1" asp-validation-for="House.TypeInfo"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Floor Number</label>
+                                    <input asp-for="House.FloorNumber"  class="form-control" id="exampleInputPassword1">
+                                     <span class="ms-1" asp-validation-for="House.FloorNumber"></span>
+                                </div>
+                                <div class="mb-3 ">
+                                    <label class="form-label" for="exampleCheck1">Door Number</label>
+                                    <input  asp-for="House.DoorNumber" class="form-control" id="exampleCheck1">
+                                     <span class="ms-1" asp-validation-for="House.DoorNumber"></span>
+                                </div>
+                                <div class="mb-3 ">
+                                    <label class="form-label" for="exampleCheck1">Block</label>
+                                <select asp-for="House.ApartmentId" asp-items='@(new SelectList(Model.Apartments, "Id", "BlockName"))' 
+                                class="form-select form-select-sm mb-3" > 
+                                <option selected>Open this select menu</option>
+                                 </select>
+                                  <span class="ms-1" asp-validation-for="House.ApartmentId"></span>
+                                </div>
+                                <input type="hidden" asp-for="House.Id">
+                                <button type="submit" class="btn btn-primary">House Update</button>
+                            </form>
+                        </div>
+                    </div>
+         </div>
