@@ -2,16 +2,13 @@
   "name": "mvcwebui",
   "version": "1.0.0",
   "description": "",
-  "private":"true",
-  "devDependencies": {
-
-  },
+  "private": "true",
   "dependencies": {
-      "bootstrap": "5.1.3",
-      "jquery": "3.6.0",
-      "jquery-validation":"1.19.5",
-      "jquery-validation-unobtrusive": "3.2.12",
-      "font-awesome":"4.7.0"
+    "bootstrap": "5.1.3",
+    "font-awesome": "4.7.0",
+    "jquery": "3.6.0",
+    "jquery-datetimepicker": "^2.5.21",
+    "jquery-validation": "1.19.5",
+    "jquery-validation-unobtrusive": "3.2.12"
   }
- 
 }

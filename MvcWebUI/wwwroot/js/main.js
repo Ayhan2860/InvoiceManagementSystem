@@ -42,15 +42,11 @@
 
 
     // Calender
-    $('#calender').datetimepicker({
+    $('#calender').datepicker({
         inline: true,
         format: 'L'
     });
-    $('#calender2').datetimepicker({
-        inline: true,
-        format: 'L'
-    });
-
+   
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,

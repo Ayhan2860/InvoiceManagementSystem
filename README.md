@@ -3,8 +3,8 @@ Management of dues and common electricity, water and natural gas bills of the ap
 
 # Build With
 [![C#](https://img.shields.io/badge/Csharp-563D7C?style=for-the-badge&logo=Csharp&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
-[![.NETCORE](https://img.shields.io/badge/ASP.NET-0090d6?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
-<!-- [![MYSQL](https://img.shields.io/badge/Mssql-0067b8?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/tr-TR/sql-server/) -->
+[![.NETCORE](https://img.shields.io/badge/.NET-512bd4?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
+[![Postgres](https://img.shields.io/badge/postgreSql-4169E1?style=for-the-badge&logo=postgreSql&logoColor=white)](https://www.postgresql.org/)
 [![Entity-Framework](https://img.shields.io/badge/EntityFramework-512bd4?style=for-the-badge&logo=nuget&logoColor=white)](https://docs.microsoft.com/tr-tr/ef/)
 
 [![Entity-Framework](https://img.shields.io/badge/FluentValidation-40babd?style=for-the-badge&logo=nuget&logoColor=white)](https://docs.microsoft.com/tr-tr/ef/)

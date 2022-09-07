@@ -35,6 +35,7 @@ namespace MvcWebUI.Controllers
         {
             return View();
         }
+   
 
         public ActionResult Houses(int apartment = 0)
         {
@@ -184,7 +185,7 @@ namespace MvcWebUI.Controllers
         public ActionResult AddInvoice(Invoice invoice)
         {
           
-            return RedirectToAction("Index");
+            return RedirectToAction("Houses", "Admin");
         }
        
 

@@ -4,6 +4,11 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+@{
+   var today = DateTime.Now;
+
+}
+
 
 
  <div class="container-fluid d-flex justify-content-center align-items-center pt-4 px-4">
@@ -31,30 +36,29 @@
                                 </div>
 
 
-                                <div class="col-sm-12 col-md col-xl">
-                                    <div class="h-100 bg-secondary rounded p-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="col-sm-12 d-flex align-items-center justify-content-between col-md col-xl">
+                                    
+                                    <div style="width:40% !important" class="h-100  bg-secondary rounded ">
+                                    <div class="d-flex align-items-center justify-content-around mb-4">
                                         <h6 class="mb-0">Invocing Date</h6>
                                        
                                          </div>
-                                         <input hidden type="text" asp-for="Invoice.InvocingDateTime" class="result">
-                                        <div id="calender"> </div>
+                                        <input type="date"  style="background-color: white;" asp-for="Invoice.InvocingDateTime" class="form-control datepicker">
+                                      
                                     </div>
-                                </div>
+                                    <div style="width:40% !important" class="h-100  bg-secondary rounded ">
 
-                                <div class="col-sm-12 col-md col-xl">
-                                    <div class="h-100 bg-secondary rounded p-4">
+
                                     <div class="d-flex align-items-center justify-content-between mb-4">
-                                        <h6 class="mb-0">Last Payment Date</h6>
+                                        <h6 class="mb-0 text-center">Last Payment Date</h6>
                                        
                                          </div>
-                                         <input hidden type="text" asp-for="Invoice.LastPaymentDate" class="result">
-                                        <div id="calender2"> </div>
+                                         <input   type="date" style="background-color: white;"   asp-for="Invoice.LastPaymentDate" class="form-control datepicker">
+                                       
                                     </div>
-                                </div>
+                                </div> 
                                 
-                             
-                                <div class="mb-3 ">
+                                <div class="mb-3 mt-5">
                                     <label class="form-label" for="exampleCheck1">Invoice Amount</label>
                                     <input value="" asp-for="Invoice.Amount" class="form-control" id="exampleCheck1">
                                     <span class="ms-1" asp-validation-for="Invoice.Amount"></span>
@@ -66,4 +70,4 @@
                     </div>
                  
          </div>
-         
+    
